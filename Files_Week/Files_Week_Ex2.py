@@ -29,4 +29,4 @@ for line in fhandle:
         total += ext_num
 
 average = total/count
-print('Average spam confidence:', round(average, 12))
+print('Average spam confidence:', round(average, 4))
