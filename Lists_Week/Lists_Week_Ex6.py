@@ -19,15 +19,15 @@ new_list = []
 while(True):
     num = input('Enter a number:')
     if num == 'done': 
-        print('Enter a number:', num)
+        print('Enter a number:', num)       #records entry of "done"
         break
     try:
         float(num)
     except:
-        print('Invalid Entry')
+        print('Invalid Entry')              #guardian to make sure only a number is entered
         quit()
-    print('Enter a number:', num)
-    new_list.append(num)
+    print('Enter a number:', num)           #records number entered as mentioned in the instructions above
+    new_list.append(num)                    #adds numbers to the list
     
-print('Maximum:', float(max(new_list)))
+print('Maximum:', float(max(new_list)))     #exits the loop and prints results
 print('Minimum:', float(min(new_list)))
