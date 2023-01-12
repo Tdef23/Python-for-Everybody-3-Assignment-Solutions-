@@ -20,7 +20,7 @@ for line in fhand:
             continue                       #eliminates duplicates
         file_dictionary[word] = count      #makes word a key and the count a value (count is optional since value isn't important)
 
-print(file_dictionary)                     #prints dictionary
+print(file_dictionary)                     #prints dictionary, prints every word each time it is used and dict() assigns a number
 
 if 'data' in file_dictionary:              #check whether string/key/word is in dictionary
     print('True')
