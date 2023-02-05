@@ -21,8 +21,12 @@ except FileNotFoundError:
     exit()
 
 for line in fhand:
-    line = line.translate(line.maketrans('', '', string.punctuation)) #struggling to make this line of code and the one below work
-    line = line.translate(line.maketrans('', '', string.digits))
+    for character in string.punctuation:
+        line = line.replace(character, '') 
+    for character in string.digits:
+        line = line.replace(character, '') #alternative lines of code using "replace" function instead of maketrans and translate below - worked for me
+#    line = line.translate(line.maketrans('', '', string.punctuation)) #struggling to make this line of code and the one below work
+#    line = line.translate(line.maketrans('', '', string.digits))
     words = line.lower().split()
     for word in words:
         for letter in word:
