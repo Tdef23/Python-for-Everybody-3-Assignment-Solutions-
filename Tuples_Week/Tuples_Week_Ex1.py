@@ -17,6 +17,9 @@
 #Enter a file name: mbox.txt
 #zqian@umich.edu 195
 
+import os
+import string
+
 try:                                  #open file
     fname = input('Enter file name:')
     fhand = open(fname)

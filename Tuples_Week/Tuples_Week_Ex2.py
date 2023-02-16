@@ -43,3 +43,31 @@ for hour, count in h_commits.items():
 h_counts.sort()             #sort list and print highest user count
 for hour, count in h_counts:
     print(hour, count)
+
+#Alternate
+hcount = dict()                           #establish lists/dicts/tuples/counts
+h_count = list()
+count = 0
+
+try:
+    fname = input('Enter file name:')
+    fhand = open(fname)
+except:
+    print('File cannot be opened')
+    quit()
+
+for line in fhand:
+    words = line.split()
+    if len(words) > 3 and words[0]=='From':
+        colpos = words[5].find(':')        #identify position of colon
+        hour = words[5][:colpos]           #segment hour from rest of time period and set
+        hcount[hour]=hcount.get(hour,0) + 1
+
+for hour, count in hcount.items():         #append from dict to list/tuple
+    h_count.append((hour, count))
+
+h_count.sort()                             #sort the list by hour
+
+for hour, count in h_count:                #print tuple in correct form
+    print(hour, count)
+        
