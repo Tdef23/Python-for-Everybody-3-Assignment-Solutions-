@@ -16,6 +16,7 @@ letter_f = list()
 try:
     fname = input('Enter file name: ')
     fhand = open(fname)
+    #fhand = open('Tuples_Week\\romeo-full.txt') #test line
 except FileNotFoundError:
     print('File cannot be opened:', fname)
     exit()

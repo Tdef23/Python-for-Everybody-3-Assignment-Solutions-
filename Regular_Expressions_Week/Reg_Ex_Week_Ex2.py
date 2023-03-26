@@ -13,9 +13,9 @@
 
 import re
 
-fname = input('Enter file:')
 try:
-    fhand = open('fname')
+    #fname = input('Enter file: ')
+    fhand = open('Regular_Expressions_Week\\mbox.txt')
 except:
     print('File cannot be opened')
     quit()
@@ -24,7 +24,7 @@ nrSearch = '^New Revision: ([0-9.]+)' #establish expression code to find
 match = 0 #establish count
 sum = 0 #stablish sum
 
-for line in hand:
+for line in fhand:
     line = line.strip()
     nr = re.findall(nrSearch, line) #expression code simplified
     if len(nr) > 0:
