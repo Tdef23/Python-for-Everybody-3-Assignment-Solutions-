@@ -33,3 +33,4 @@ for line in fhand:
     
 average = sum/match
 print(average)
+fhand.close()

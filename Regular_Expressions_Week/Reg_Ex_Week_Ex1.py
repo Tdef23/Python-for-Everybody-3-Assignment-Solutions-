@@ -27,3 +27,4 @@ for line in handle:
         expCount += 1 #count
 
 print('mbox.txt had',expCount,'lines that matched', searchTerm) #organize and print proper return
+handle.close()
